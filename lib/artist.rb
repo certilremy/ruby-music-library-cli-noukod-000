@@ -1,33 +1,16 @@
 class Artist
-
-
   extend Concerns::Findable
-
-
   @@all=[]
-
-
   attr_accessor :name,:genres,:artist
-
   attr_reader :songs
-
-
   def initialize(name)
-
     @name=name
-
     @songs=[]
-
   end
-
-
+  
   def self.all
-
     @@all
-
   end
-
-
   def save
 
     @@all << self
