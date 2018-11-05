@@ -1,7 +1,7 @@
 class Song
 
 
-  extend Concerns: :Findable
+   extend Concerns::Findable
 
 
   @@all=[]
