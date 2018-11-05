@@ -1,7 +1,7 @@
 class Song
 
 
-  extend Concerns::Findable
+  extend Concerns: :Findable
 
 
   @@all=[]
@@ -44,18 +44,10 @@ class Song
 
 
   def artist=(artist)
-
-    # artist.add_song(self)
-
      if artist!=nil && !artist.songs.include?(self)
-
        artist.add_song(self)
-
-
      end
-
      @artist=artist
-
   end
 
 
@@ -76,9 +68,6 @@ class Song
   def self.find_by_name(name)
 
      @@all.select{|song| song.name==name}[0]
-
-
-    #binding.pry
 
   end
 
